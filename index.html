@@ -1,0 +1,122 @@
+<html>
+    <body>
+<head>
+<style>
+body{
+    background-color: #12235c;
+color:#91762a;
+font-family: papyrus;
+
+}
+#button {
+  background-color:#299190;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+</style>
+<script>
+function add_number() {
+    if(document.getElementById("number1").value=="" || document.getElementById("number2").value == ""){
+        alert("Both Fields are Mandatory!");
+    }else{
+            var first_number = parseInt(document.getElementById("number1").value);
+            
+            var second_number = parseInt(document.getElementById("number2").value);
+            
+            
+            var result = first_number + second_number;
+
+            document.getElementById("result").value = result;
+        }
+}
+
+function subtract_number() {
+  
+    if(document.getElementById("number1").value=="" || document.getElementById("number2").value == ""){
+        alert("Both Fields are Mandatory!");
+    }else{
+            var first_number = parseInt(document.getElementById("number1").value);
+          
+            
+            var second_number = parseInt(document.getElementById("number2").value);
+           
+            var result = first_number - second_number;
+
+            document.getElementById("result").value = result;
+        }
+}
+function multiply_number() {
+  
+    if(document.getElementById("number1").value=="" || document.getElementById("number2").value == ""){
+        alert("Both Fields are Mandatory!");
+    }else{
+            var first_number = parseInt(document.getElementById("number1").value);
+          
+            
+            var second_number = parseInt(document.getElementById("number2").value);
+           
+            var result = first_number * second_number;
+
+            document.getElementById("result").value = result;
+        }
+}
+function divide_number() {
+  
+    if(document.getElementById("number1").value=="" || document.getElementById("number2").value == ""){
+        alert("Both Fields are Mandatory!");
+    }else{
+            var first_number = parseInt(document.getElementById("number1").value);
+          
+            
+            var second_number = parseInt(document.getElementById("number2").value);
+           
+            var result = first_number / second_number;
+
+            document.getElementById("result").value = result;
+        }
+}
+
+function reset(){
+    
+    document.getElementById("number1").value = "";
+    document.getElementById("number2").value = "";
+    document.getElementById("result").value = "";
+}
+</script>
+</head>
+
+        <center>
+            <h1> CALCULATOR</h1>
+<form>
+    <label> Enter First Number</label>
+    <br>
+    <input type="number" id="number1">
+    <br><br>
+    <label> Enter Second Number </label>
+    <br>
+    <input type="number" id="number2">
+        <br><br>
+        <input type="button" id="button" value="ADD" onclick="add_number()">
+        <input type="button"  id="button" value="SUBTRACT" onclick="subtract_number()">
+
+         <input type="button"  id="button" value="MULTIPLY" onclick="multiply_number()">
+
+         <input type="button"  id="button" value="DIVIDE" onclick="divide_number()">
+            <br><br>
+<label> Result </label>
+<br>
+<input type="number" id="result">
+<br> <BR>
+<input type="button" id="button"
+value="RESET" onclick="reset()">
+</form>
+    </body>
+</html>
